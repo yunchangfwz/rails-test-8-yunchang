@@ -13,6 +13,7 @@ gem 'font-awesome-sass', '~> 4.5.0'
 gem 'slim'
 gem 'simple_form'
 gem 'materialize-sass'
+gem 'paperclip'
 
 group :development, :test do
   gem 'byebug'

@@ -1,15 +1,16 @@
 #home-index-container
   .container
     .row
-      .col-md-5
+      .col.m5
         span aaaaaaa
-      .col-md-7
-        = simple_form_for(@user, html: { class: 'form-horizontal' }) do |f|
-          = f.input :name
-          = f.input :description, as: :text
-          = f.input :boss, as: :boolean
+      .col.m7
        
+        .row
+          .input-field.col.s6
+            input#first_name2.validate type="text" value="Alvin" /
+            label.active for="first_name2"  First Name
+
 javascript:
   $(document).ready(function(){
-    $('span').html('hello span')
+    alert(1)
   })
