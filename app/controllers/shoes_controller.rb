@@ -14,6 +14,7 @@ class ShoesController < ApplicationController
     params[:search_filter].permit(
                                  :min_price,
                                  :max_price,
+                                 :order_by,
                                  :brand_ids => []
                                  )
   end

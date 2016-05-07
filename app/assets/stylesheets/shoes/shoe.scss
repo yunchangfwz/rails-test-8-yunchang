@@ -3,6 +3,12 @@
 
   &:hover {
     @include box-shadow($box_shadow);
+
+    .btn-wrap {
+      button {
+        display: block;
+      }
+    }
   }
 
   .name {
@@ -33,6 +39,7 @@
       background: #1976d2;
       border-radius: 3px;
       padding: 10px 0;
+      display: none;
 
       @include box-shadow($box_shadow_button);
     }

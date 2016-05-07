@@ -3,5 +3,6 @@
   = f.collection_check_boxes :brand_ids, Brand.all.map{ |c| [c.id, c.name] }, :first, :last
   = f.input :min_price, :as => :hidden
   = f.input :max_price, :as => :hidden
+  = f.input :order_by, :as => :hidden, input_html: { value: 'asc' }
   h4.price Price
   #price_slider

@@ -52,6 +52,7 @@ var call_ajax_get_product= function (min_price_default, max_price_default, min, 
         $('#new_search_filter').submit();
         $("#new_search_filter").on("ajax:success", function(e, data, status, xhr) {
           $('select').material_select();
+          $("#short-by").val($('#search_filter_order_by').val());
           call = 0;
         }).on("ajax:error", function(e, xhr, status, error) {
           return $("#new_search_filter").append("<p>ERROR</p>");
@@ -60,4 +61,8 @@ var call_ajax_get_product= function (min_price_default, max_price_default, min, 
       }, 1000);
     }
   }
+  $(document).on('change', '#short-by', function(){
+    $('#search_filter_order_by').val($(this).val());
+    get_data();
+  })
 }
