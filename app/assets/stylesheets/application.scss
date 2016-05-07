@@ -1,6 +1,10 @@
 @import "_variables";
+@import "_mixins";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "materialize";
-@import "theme.scss";
+@import "theme";
 @import "shared/header";
+@import "shared/footer";
+@import "shoes/shoe";
+@import "home/index";

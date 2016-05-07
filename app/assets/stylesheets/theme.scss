@@ -1,6 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 input:not([type]),
@@ -22,4 +23,8 @@ textarea.materialize-textarea {
 
 .row {
   margin-bottom: 0;
+}
+
+.img img {
+  max-width: 100%;
 }
