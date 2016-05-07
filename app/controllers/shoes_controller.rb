@@ -1,5 +1,6 @@
 class ShoesController < ApplicationController
-
+  protect_from_forgery except: :filter
+  
   def filter
     @search_filter = SearchFilter.new(search_params)
     @shoes = @search_filter.result

@@ -5,10 +5,11 @@ describe HomeController, type: :controller do
     def do_request
       get :index
     end
+    let!(:brands)      { create_list(:brand, 3)}
 
     it "displays video request form" do
       do_request
-      # expect(assigns(:test)).to eq 1
+      expect(assigns(:brands)).to eq brands
     end
   end
 end

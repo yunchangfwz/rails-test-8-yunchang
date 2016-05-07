@@ -20,6 +20,7 @@ class SearchFilter
     result = result.find_by_min_price(min_price.to_f) if min_price.present?
     result = result.find_by_max_price(max_price.to_f) if max_price.present?
     result = result.order(created_at: :desc)
+    result = result.limit(12)
     result
   end
 
