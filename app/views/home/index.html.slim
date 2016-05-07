@@ -1,15 +1,33 @@
 #home-index-container
   .container
     .row
-      .col.m5
-        span aaaaaaa
-      .col.m7
-       
-        .row
-          .input-field.col.s6
-            input#first_name2.validate type="text" value="Alvin" /
-            label.active for="first_name2"  First Name
-
+      .col.m3
+        .refine-wrap
+          h3 Refine by
+          .content
+            .fillter-wrap
+              = render partial: 'shared/filter_form', locals: {brand: @brand}
+      .col.m9
+        .banner-wrap
+          = render 'shared/banner'
+        .shoes-wrap
+          .filter-wrap
+            .row
+              .col.m5
+                span.result 144 matching products
+              .col.m7
+                .row
+                  .input-field.col.m6
+                    select#short-by
+                      option value="asc"  Alphabetical
+                      option value="desc" Non alphabetical
+                    label Sort By
+          .shoes
+            .row
+              = render partial: 'shoes/shoes', locals: {shoes: @shoes}
+.hidden.prepare-for-ajax
+  = render partial: 'shoes/shoe', locals: {shoe: Shoe.new}
 javascript:
   $(document).ready(function(){
+    call_ajax_get_product();
   })

@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @shoe = Shoe.all
+    @brands = Brand.all
+    @shoes = Shoe.all
   end
 end
