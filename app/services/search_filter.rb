@@ -13,7 +13,7 @@ class SearchFilter
     @brand_ids  = option[:brand_ids]
     @min_price  = option[:min_price]
     @max_price  = option[:max_price]
-    @order_by  = option[:order_by]
+    @order_by   = option[:order_by]
   end
 
   def result
@@ -22,7 +22,6 @@ class SearchFilter
     result = result.find_by_min_price(min_price.to_f) if min_price.present?
     result = result.find_by_max_price(max_price.to_f) if max_price.present?
     result = result.order(name: order_by)
-    result = result.limit(12)
     result
   end
 

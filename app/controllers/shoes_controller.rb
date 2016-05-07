@@ -3,7 +3,8 @@ class ShoesController < ApplicationController
   
   def filter
     @search_filter = SearchFilter.new(search_params)
-    @shoes = @search_filter.result
+    result = @search_filter.result
+    @shoes = result.paginate(page: params['page'], per_page: 12)
   end
 
   protected

@@ -18,15 +18,7 @@
         - @shoes.each do |shoe|
           .col.m4
             = render shoe
-        ul.pagination
-          li.disabled
-            a href="#!" 
-              i.material-icons chevron_left
-          li.active
-            a href="#!"  1
-          li.waves-effect
-            a href="#!" 
-              i.material-icons chevron_right
-
+        .clearfix
+        = js_will_paginate @shoes
       - else
         p Sorry, We don't have any shoes match your filter. Please change the option and filter again. Thanks

@@ -14,6 +14,7 @@ gem 'slim'
 gem 'simple_form'
 gem 'materialize-sass'
 gem 'paperclip'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'byebug'

@@ -50,19 +50,29 @@ var call_ajax_get_product= function (min_price_default, max_price_default, min, 
       call = 1;
       setTimeout(function(){
         $('#new_search_filter').submit();
-        $("#new_search_filter").on("ajax:success", function(e, data, status, xhr) {
-          $('select').material_select();
-          $("#short-by").val($('#search_filter_order_by').val());
-          call = 0;
-        }).on("ajax:error", function(e, xhr, status, error) {
-          return $("#new_search_filter").append("<p>ERROR</p>");
-          call = 0;
-        });
       }, 1000);
     }
   }
+
+  $("#new_search_filter").on("ajax:success", function(e, data, status, xhr) {
+    search_ajax_success()
+    call = 0;
+  }).on("ajax:error", function(e, xhr, status, error) {
+    return $("#new_search_filter").append("<p>ERROR</p>");
+    call = 0;
+  });
+
+  $(".pagination a").on("ajax:success", function(e, data, status, xhr) {
+    search_ajax_success()
+  })
+
+  function search_ajax_success (){
+    $(document).find("#short-by").val( $('#search_filter_order_by').val() );
+    $('select').material_select();
+  }
+
   $(document).on('change', '#short-by', function(){
     $('#search_filter_order_by').val($(this).val());
     get_data();
-  })
+  })  
 }
