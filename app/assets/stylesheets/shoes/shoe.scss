@@ -1,0 +1,40 @@
+.shoes-shoe-container {
+  padding: 20px;
+
+  &:hover {
+    @include box-shadow($box_shadow);
+  }
+
+  .name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .sku {
+    font-size: 14;
+    color: $light_gray;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    font-size: 18px;
+    color: $black;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .btn-wrap {
+    height: 45px;
+
+    button {
+      width: 100%;
+      border: none;
+      color: #fff;
+      background: #1976d2;
+      border-radius: 3px;
+      padding: 10px 0;
+
+      @include box-shadow($box_shadow_button);
+    }
+  }
+}
