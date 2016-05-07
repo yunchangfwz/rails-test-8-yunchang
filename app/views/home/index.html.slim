@@ -11,23 +11,7 @@
         .banner-wrap
           = render 'shared/banner'
         .shoes-wrap
-          .filter-wrap
-            .row
-              .col.m5
-                span.result 144 matching products
-              .col.m7
-                .row
-                  .input-field.col.m6
-                    select#short-by
-                      option value="asc"  Alphabetical
-                      option value="desc" Non alphabetical
-                    label Sort By
-          .shoes
-            .row
-              = render partial: 'shoes/shoes', locals: {shoes: @shoes}
-.hidden.prepare-for-ajax
-  = render partial: 'shoes/shoe', locals: {shoe: Shoe.new}
 javascript:
   $(document).ready(function(){
-    call_ajax_get_product();
+    call_ajax_get_product(20, 80, 0, 200);
   })
