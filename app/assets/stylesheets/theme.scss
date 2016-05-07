@@ -59,3 +59,24 @@ textarea.materialize-textarea {
     width: 100%;
   }
 }
+
+.pagination {
+  em, span, a {
+    margin: 0 5px;
+    padding: 9px 13px;
+    color: #212121 !important;
+    border-radius: 3px;
+  }
+
+  a {
+    &:hover {
+      color: #fff !important;
+      background: #1976d2;
+    }
+  }
+
+  em {
+    color: #fff !important;
+    background: #1976d2;
+  }
+}

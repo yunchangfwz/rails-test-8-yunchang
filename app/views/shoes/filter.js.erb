@@ -1,2 +1,5 @@
 $("#home-index-container .shoes-wrap").html("<%= escape_javascript(render partial: 'shoes/list', locals: { shoes: @shoes }) %>");
 $('select').material_select();
+$('.pagination a').addClass('waves-effect');
+$('.pagination .previous_page').html('<i class="fa fa-chevron-left"></i>');
+$('.pagination .next_page').html('<i class="fa fa-chevron-right"></i>');
