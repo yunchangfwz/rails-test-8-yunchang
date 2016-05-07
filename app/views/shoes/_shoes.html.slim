@@ -1,0 +1,6 @@
+- if @shoes.present? 
+  - @shoes.each do |shoe|
+    .col.m4
+      = render shoe
+- else
+  p Sorry, We don't have any shoes match your filter. Please change the option and filter again. Thanks

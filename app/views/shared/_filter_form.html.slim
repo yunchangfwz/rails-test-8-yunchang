@@ -1,0 +1,5 @@
+= simple_form_for SearchFilter.new(params[:search_filter]), remote: true,url: filter_shoe_path,html: {method: :get} do |f|
+  h4 Brands
+  = f.collection_check_boxes :brand_ids, Brand.all.map{ |c| [c.id, c.name] }, :first, :last
+  = f.button :submit, ''
+

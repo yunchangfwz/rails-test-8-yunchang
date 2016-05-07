@@ -1,0 +1,12 @@
+.shoes-shoe-container
+  .img 
+    = image_tag(shoe.image.url(:medium))
+  .name = shoe.name
+  .sku = shoe.sku
+  .price 
+    | $
+    = number_with_precision(shoe.price, precision: 2, separator: ',', delimiter: '.')
+  .btn-wrap
+    button.waves-effect.waves-light.btnadd-to-cart 
+      = icon('shopping-cart')
+      = ' Add to Cart'
