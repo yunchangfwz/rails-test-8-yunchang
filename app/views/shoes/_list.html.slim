@@ -1,0 +1,32 @@
+.shoes-list
+  .filter-wrap
+    .row
+      .col.m5
+        .result
+          span = "#{@shoes.size} matching products"
+      .col.m7
+        .row
+          .input-field.col.m6
+            select#short-by
+              option value="asc"  Alphabetical
+              option value="desc" Non alphabetical
+          .clearfix
+      .clearfix
+  .shoes
+    .row
+      - if @shoes.present? 
+        - @shoes.each do |shoe|
+          .col.m4
+            = render shoe
+        ul.pagination
+          li.disabled
+            a href="#!" 
+              i.material-icons chevron_left
+          li.active
+            a href="#!"  1
+          li.waves-effect
+            a href="#!" 
+              i.material-icons chevron_right
+
+      - else
+        p Sorry, We don't have any shoes match your filter. Please change the option and filter again. Thanks
