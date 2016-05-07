@@ -1,0 +1,20 @@
+#shared-header-container {
+  #header-logo {
+    margin-top: 40px;
+  }
+
+  .menu-wrap {
+    padding: 20px 0;
+    background: #f7f7f7;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    .row {
+      margin-bottom: 0;
+
+      .col {
+        text-align: center;
+      }
+    }
+  }
+}
