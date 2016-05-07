@@ -1,0 +1,15 @@
+#home-index-container
+  .container
+    .row
+      .col-md-5
+        span aaaaaaa
+      .col-md-7
+        = simple_form_for(@user, html: { class: 'form-horizontal' }) do |f|
+          = f.input :name
+          = f.input :description, as: :text
+          = f.input :boss, as: :boolean
+       
+javascript:
+  $(document).ready(function(){
+    $('span').html('hello span')
+  })

@@ -9,23 +9,23 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-# gem 'bootstrap-sass'
-# gem 'font-awesome-sass', '~> 4.5.0'
-# gem 'slim'
-# gem 'simple_form'
+gem 'font-awesome-sass', '~> 4.5.0'
+gem 'slim'
+gem 'simple_form'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'factory_girl_rails'
-  # gem 'binding_of_caller'
-  # gem 'pry-rails'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  # gem 'html2slim'
+  gem 'html2slim'
 end
 
