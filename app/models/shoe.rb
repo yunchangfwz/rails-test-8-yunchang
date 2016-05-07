@@ -13,11 +13,15 @@ class Shoe < ActiveRecord::Base
     where(brand_id: brand_ids)
   end
 
+  def self.find_by_min_and_max_price(min_price, max_price)
+    where("price >= ? and price <= ?", min_price, max_price )
+  end
+
   def self.find_by_min_price(min_price)
     where("price >= ?", min_price )
   end
 
-  def self.find_by_min_price(max_price)
+  def self.find_by_max_price(max_price)
     where("price <= ?", max_price )
   end
 end
