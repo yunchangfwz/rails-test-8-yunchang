@@ -1,5 +1,6 @@
 class Shoe < ActiveRecord::Base
-  
+  belongs_to :brand
+   
   validates :name,         presence: true 
   validates :sku,          presence: true
   validates :price,        presence: true, numericality: { greater_than: 0 } 
