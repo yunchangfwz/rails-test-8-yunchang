@@ -2,6 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 }
 
 input:not([type]),
@@ -19,6 +20,16 @@ input[type=search],
 textarea.materialize-textarea {
   border: none;
   border-bottom: 1px solid #333;
+  font-weight: 300;
+}
+
+[type="checkbox"]:checked + label:before {
+  border-right: 2px solid #1976d2;
+  border-bottom: 2px solid #1976d2;
+}
+
+.noUi-connect, .noUi-target .range-label {
+  background-color: #1976d2;
 }
 
 .row {
@@ -27,4 +38,24 @@ textarea.materialize-textarea {
 
 .img img {
   max-width: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.container {
+  width: 1070px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
 }

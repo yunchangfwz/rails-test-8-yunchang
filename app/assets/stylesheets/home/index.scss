@@ -12,6 +12,63 @@
         font-size: 18px;
         color: $black;
         font-weight: bold;
+
+        &.price {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .fillter-wrap {
+    span {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  #price_slider {
+    margin-top: 50px;
+
+    .lable {
+      top: -30px;
+      width: 100%;
+      position: absolute;
+
+      span {
+        width: 20%;
+        float: left;
+        color: #bdbdbd;
+        font-size: 12px;
+        text-align: left;
+
+        &:nth-child(4) {
+          text-align: center;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .shoes-wrap {
+    margin-top: 20px;
+    min-height: 300px;
+
+    .shoes {
+      margin-top: 30px;
+    }
+
+    .filter-wrap {
+      .input-field {
+        margin-top: 0;
+        float: right;
+      }
+
+      .result {
+        margin-top: 20px;
       }
     }
   }

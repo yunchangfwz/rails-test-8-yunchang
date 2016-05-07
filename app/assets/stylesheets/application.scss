@@ -1,8 +1,11 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400,300,500";
+
 @import "_variables";
 @import "_mixins";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "materialize";
+@import "materialize/extras/nouislider";
 @import "theme";
 @import "shared/header";
 @import "shared/footer";
